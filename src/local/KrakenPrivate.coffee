@@ -3,7 +3,7 @@ Querystring = require 'querystring'
 Crypto = require 'crypto'
 
 # Use the same nonce for all invocations
-NONCE = new Date().valueOf() * 1000
+NONCE = new Date() * 1000000
 
 sign = (path, secret, params) ->
   message = Querystring.stringify params
